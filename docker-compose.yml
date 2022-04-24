@@ -5,15 +5,16 @@ services:
     networks:
       - bravo
     ports:
-     - "8080:80"
+     - "8100:80"
     volumes:
-     - /data:/data
+     - /home/ales/bravo_browser/bravo/data:/data
   mongo:
     image: "mongo:3.4"
     volumes:
-     - /data/mongo/db:/data/db
+     - /home/ales/bravo_browser/bravo/data/mongo/data/db:/data/db
     networks:
       - bravo
+    command: --wiredTigerCacheSizeGB 30.0
 networks:
   bravo:
     name: bravoWebApp
