@@ -1,6 +1,13 @@
 # BRAVO
 BRowse All Variants Online
 
+## Pre-face
+Steps to create the SGP version of the BRAVO browser 
+
+1. Pull the BRAVO repository from AlesMaver/bravo
+2. Run `docker-compose up --build -d` in the bravo folder. After this, the browser will be operational. Change any folder settings in the `config/default.py` file. 
+3. Run `sh data-import.sh` from the bravo folder (may take hours!)
+
 ## Installation
 
 1. [System Setup](#system-setup)
