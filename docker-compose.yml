@@ -8,6 +8,12 @@ services:
      - "8100:80"
     volumes:
      - /home/ales/bravo_browser/bravo/data:/data
+     - /home/ales/bravo_browser/bravo/templates:/templates
+     - /home/ales/bravo_browser/bravo/static:/static
+     - /home/ales/bravo_browser/bravo/config:/config
+     - /home/ales/bravo_browser/bravo/sequences.py:/sequences.py
+     - /home/ales/bravo_browser/bravo/exac.py:/exac.py
+     - /home/ales/bravo_browser/bravo/utils.py:/utils.py
   mongo:
     image: "mongo:3.4"
     volumes:
