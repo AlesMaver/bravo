@@ -4,4 +4,7 @@
 docker exec bravo_web_1 /bin/bash -c /deploy/INSTALL.sh -v hg38 -t 8
 
 # Create variants collection in MongoDB.
-docker exec bravo_web_1 python manage.py variants -t 8 -v /data/import_vcf/chr22.TOPMed_freeze5_62784.vcf.gz
+docker exec bravo_web_1 python manage.py variants -t 20 -v /data/vcf/all.percentiles.vcf.gz
+docker exec bravo_web_1 python manage.py percentiles -t 20 -v /data/vcf/all.percentiles.vcf.gz
+docker exec bravo_web_1 python manage.py metrics -m /data/metrics/metrics.json
+
